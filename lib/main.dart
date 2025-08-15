@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_clone/colors.dart';
 import 'package:google_clone/responsive/mobile_screen_layout.dart';
 import 'package:google_clone/responsive/responsive_layout_screen.dart';
 import 'package:google_clone/responsive/web_screen_layout.dart';
@@ -14,6 +15,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Google Clone",
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: backgroundColor,
+      ),
       home: ResponsiveLayoutScreen(
         mobileScreenLayout: MobileScreenLayout(),
         webScreenLayout: WebScreenLayout(),
