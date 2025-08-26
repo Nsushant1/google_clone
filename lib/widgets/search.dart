@@ -20,7 +20,7 @@ class Search extends StatelessWidget {
         ),
         SizedBox(height: 20),
         SizedBox(
-          width: size.width * 0.4,
+          width: size.width > 768 ? size.width * 0.4 : size.width * 0.9,
           child: TextFormField(
             decoration: InputDecoration(
               border: const OutlineInputBorder(
@@ -42,8 +42,6 @@ class Search extends StatelessWidget {
               ),
             ),
           ),
-
-
         ),
       ],
     );
